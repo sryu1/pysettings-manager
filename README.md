@@ -18,3 +18,5 @@ one, two = pysettings.load(config_file="settings.json", unpack=True)
 print(one)
 print(two)
 ```
+
+If you find a bug, please report them in issues, pull requests are welcome :)
