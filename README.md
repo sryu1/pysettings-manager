@@ -1,5 +1,5 @@
 # pysettings
-A module for saving and loading settings
+A python module for saving and loading settings
 
 ## Get Started
 This is not recommended yet, as the module is in development constantly
