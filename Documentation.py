@@ -1,31 +1,25 @@
-import json
-from typing import Any, Dict, Optional
-import os
-
-
 def save(config_file: str, **kwargs: Any) -> None:
     """Save variables to a JSON file.
 
     Parameters:
-        config_file: The file to save the variables to.
-        **kwargs: The variables to save.
+    config_file (str): The file to save the variables to.
+    **kwargs (Any): The variables to save. Any number of keyword arguments can be passed to this function, and they will all be saved to the JSON file as a dictionary.
 
     Raises:
-        FileNotFoundError: If the directory for `config_file` does not exist.
-        PermissionError: If the file cannot be opened for writing due to insufficient permissions.
-        IOError: If there is an error writing to the file.
-    """
-    directory = os.path.dirname(config_file)
-    if directory:
-        os.makedirs(directory, exist_ok=True)
-    try:
-        with open(config_file, "w") as f:
-            json.dump(kwargs, f)
-    except (FileNotFoundError, PermissionError) as e:
-        raise e
-    except IOError as e:
-        raise IOError(f"Error saving variables: {e}")
+    FileNotFoundError: If the directory for `config_file` does not exist.
+    PermissionError: If the file cannot be opened for writing due to insufficient permissions.
+    IOError: If there is an error writing to the file.
 
+    Example:
+    >>> # Save a dictionary to a JSON file
+    >>> settings = {"foo": 1, "bar": "hello"}
+    >>> save("settings.json", **settings)
+    >>>
+    >>> # Save multiple dictionaries to a JSON file
+    >>> settings1 = {"foo": 1, "bar": "hello"}
+    >>> settings2 = {"baz": 2, "qux": "world"}
+    >>> save("settings.json", **settings1, **settings2)
+    """
 
 def load(config_file: str, *, unpack: bool = False, default: Optional[Any] = None) -> Any:
     """Load variables from a JSON file.
@@ -49,30 +43,20 @@ def load(config_file: str, *, unpack: bool = False, default: Optional[Any] = Non
     >>> # Return dictionary
     >>> settings = load("settings.json")
     """
-    try:
-        with open(config_file, "r") as f:
-            settings = json.load(f)
-    except (FileNotFoundError, ValueError) as e:
-        return default
-    except IOError as e:
-        raise IOError(f"Error loading variables: {e}")
-
-    if unpack:
-        if isinstance(settings, dict):
-            return settings
-        else:
-            raise ValueError("Cannot unpack variables: JSON file does not contain a dictionary")
-    else:
-        return settings
-
 
 def config_file_exists(config_file: str) -> bool:
     """Check whether a configuration file exists.
 
     Parameters:
-        config_file: The file to check for existence.
+    config_file (str): The file to check for existence.
 
     Returns:
-        `True` if the file exists, `False` otherwise.
+    bool: `True` if the file exists, `False` if it does not.
+
+    Example:
+    >>> exists = config_file_exists("settings.json")
+    >>> if exists:
+    >>>     print("Settings file found")
+    >>> else:
+    >>>     print("Settings file not found")
     """
-    return os.path.exists(config_file)
