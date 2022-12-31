@@ -5,6 +5,6 @@ epic = "epic!!!"
 settings = {"happy": "happy :)", "epic": "epic!!!"}
 pysettings.save_variables(settings_file="settings.json", happy=happy, epic=epic)
 
-nice = pysettings.load("settings.json")
+nice = pysettings.load_variables("settings.json")
 # locals().update(nice)
 print(nice)
