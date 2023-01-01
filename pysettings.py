@@ -27,7 +27,9 @@ def save(config_file: str, **kwargs: Any) -> None:
         raise IOError(f"Error saving variables: {e}")
 
 
-def load(config_file: str, *, unpack: bool = False, default: Optional[Any] = None) -> Any:
+def load(
+    config_file: str, *, unpack: bool = False, default: Optional[Any] = None
+) -> Any:
     """Load variables from a JSON file.
 
     Parameters:
@@ -61,7 +63,9 @@ def load(config_file: str, *, unpack: bool = False, default: Optional[Any] = Non
         if isinstance(settings, dict):
             return settings
         else:
-            raise ValueError("Cannot unpack variables: JSON file does not contain a dictionary")
+            raise ValueError(
+                "Cannot unpack variables: JSON file does not contain a dictionary"
+            )
     else:
         return settings
 

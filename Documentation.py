@@ -21,7 +21,10 @@ def save(config_file: str, **kwargs: Any) -> None:
     >>> save("settings.json", **settings1, **settings2)
     """
 
-def load(config_file: str, *, unpack: bool = False, default: Optional[Any] = None) -> Any:
+
+def load(
+    config_file: str, *, unpack: bool = False, default: Optional[Any] = None
+) -> Any:
     """Load variables from a JSON file.
 
     Parameters:
@@ -43,6 +46,7 @@ def load(config_file: str, *, unpack: bool = False, default: Optional[Any] = Non
     >>> # Return dictionary
     >>> settings = load("settings.json")
     """
+
 
 def config_file_exists(config_file: str) -> bool:
     """Check whether a configuration file exists.
