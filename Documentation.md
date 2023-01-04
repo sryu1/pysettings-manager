@@ -1,11 +1,11 @@
 # `save` function
 
-Save variables to a JSON file.
+Save variables or a dictionary to a JSON file.
 
 ## Parameters
 
-- `config_file` (str): The file to save the variables to.
-- `**kwargs` (Any): The variables to save. Any number of keyword arguments can be passed to this function, and they will all be saved to the JSON file as a dictionary.
+- `config_file` (str): The file to save the data to.
+- `**kwargs` (Any): The data to save. If a dictionary is passed as the only argument, it will be saved to the JSON file as is. If multiple keyword arguments are passed, they will be combined into a dictionary and saved to the JSON file.
 
 ## Raises
 
@@ -20,10 +20,16 @@ Save variables to a JSON file.
 settings = {"foo": 1, "bar": "hello"}
 save("settings.json", **settings)
 
+# Save variables to a JSON file
+foo = 1
+bar = "hello"
+save("settings.json", foo=foo, bar=bar)
+
 # Save multiple dictionaries to a JSON file
 settings1 = {"foo": 1, "bar": "hello"}
 settings2 = {"baz": 2, "qux": "world"}
 save("settings.json", **settings1, **settings2)
+```
 
 # `load` function
 
@@ -53,3 +59,24 @@ foo, bar = load("settings.json", unpack=True)
 # Return dictionary
 settings = load("settings.json")
 ```
+
+# `config_file_exists` function
+
+Check whether a configuration file exists.
+
+## Parameters
+
+- `config_file` (str): The file to check for existence.
+
+## Returns
+
+- `bool`: `True` if the file exists, `False` if it does not.
+
+## Example
+
+```python
+exists = config_file_exists("settings.json")
+if exists:
+    print("Settings file found")
+else:
+    print("Settings file not found")
