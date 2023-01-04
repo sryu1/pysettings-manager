@@ -8,5 +8,8 @@ url = "https://github.com/sryu1/pysettings"
 [tool.poetry.dependencies]
 python = "^3.7"
 
+[tool.poetry.dev-dependencies]
+git+https://github.com/sryu1/pysettings = "*"
+
 [build-system]
 requires = ["setuptools"]
