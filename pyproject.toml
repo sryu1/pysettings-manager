@@ -1,17 +1,25 @@
-[tool.poetry]
-name = "pysettings"
-version = "0.1.0"
-description = "A module for loading and saving variables to and from a JSON file"
-authors = ["sryu1"]
-url = "https://github.com/sryu1/pysettings"
-py_modules = ["pysettings"]
-
-[tool.poetry.dependencies]
-python = "^3.7"
-
-[tool.poetry.dev-dependencies]
-git+https://github.com/sryu1/pysettings = "*"
-
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysettings"
+description = "A python package for saving and loading using JSON files"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = []
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "json"
+    ]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+pdf = ["]
+rest = []
+
+[project.scripts]
+my-script = ""
