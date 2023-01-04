@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "pysettings"
+version = "0.1.0"
+description = "A module for loading and saving variables to and from a JSON file"
+authors = ["sryu1"]
+url = "https://github.com/sryu1/pysettings"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[build-system]
+requires = ["setuptools"]
