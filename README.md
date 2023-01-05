@@ -4,6 +4,8 @@
 
 A python module for saving and loading settings
 
+This module will most likely change it's name depending on availability in pypi
+
 ## Get Started
 
 This is not recommended yet, as the module is in development constantly
