@@ -1,6 +1,6 @@
 import json
-from typing import Any, Dict, Optional
-import os
+from typing import Any, Optional
+
 
 def load(
     config_file: str, *, unpack: bool = False, default: Optional[Any] = None

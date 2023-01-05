@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pysettings-manager"
-version = "0.1.1"
+version = "0.1.2"
 readme = "README.md"
 description = "A python module for saving and loading settings"
 [project.urls]
