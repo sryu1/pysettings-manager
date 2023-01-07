@@ -1,6 +1,6 @@
 # pysettings-manager
 
-[![](https://img.shields.io/badge/status-in%20development-blue)]
+![](https://img.shields.io/badge/status-in%20development-blue)
 [![](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/sryu1/pysettings-manager)](https://pypi.org/project/pysettings-manager)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
