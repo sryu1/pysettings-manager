@@ -9,6 +9,8 @@ A python module for saving and loading settings
 
 ## Get Started
 
+Take a look at the [documentation](sryu1.gitbook.io/pysettings-manager/)
+
 ```console
 pip install pysettings-manager
 ```
