@@ -2,6 +2,7 @@
 
 [![](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/sryu1/pysettings-manager)](https://pypi.org/project/pysettings-manager)
+[![PyPI downloads](https://img.shields.io/pypi/dm/pypistats.svg)](https://pypistats.org/packages/pysettings-manager)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 A python module for saving and loading settings
