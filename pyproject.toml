@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pysettings-manager"
-version = "0.1.3"
+version = "0.1.4"
 readme = "README.md"
 description = "A python module for saving and loading settings"
 requires-python = ">=3.7"
@@ -21,3 +21,4 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/sryu1/pysettings-manager"
 "Bug Tracker" = "https://github.com/sryu1/pysettings-manager/issues"
+"Documentation" = "https://sryu1.gitbook.io/pysettings-manager"
